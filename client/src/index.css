@@ -1,0 +1,87 @@
+.App {
+  height: 100%;
+  width: 100%;
+  background: black; }
+  .App .Head, .App .Left, .App .Right, .App .Foot, .App .Action {
+    border: 2px solid lightgreen;
+    border-radius: 4px;
+    background: black;
+    position: absolute;
+    color: lightgreen;
+    transition: 0.7s all;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap; }
+    .App .Head h1, .App .Left h1, .App .Right h1, .App .Foot h1, .App .Action h1 {
+      margin: auto;
+      width: 100%; }
+  .App .Head:hover,
+  .App .Left:hover,
+  .App .Right:hover,
+  .App .Foot:hover,
+  .App .Action:hover {
+    color: white;
+    transition: 0.7s all; }
+  .App .Head {
+    top: -2px;
+    height: 36px;
+    width: calc(100% - 38px); }
+    .App .Head img {
+      width: 40px;
+      height: 34px;
+      filter: invert(1); }
+    .App .Head h5 {
+      margin: 0;
+      height: 36px;
+      align-items: center;
+      color: white;
+      font-size: 26px; }
+  .App .Left {
+    left: -2px;
+    top: 38px;
+    height: calc(100% - 74px);
+    width: 36px; }
+    .App .Left h2 {
+      transform: rotate(90deg); }
+  .App .Right {
+    right: -2px;
+    height: calc(100% - 36px);
+    width: 36px; }
+  .App .Foot {
+    bottom: -4px;
+    height: 36px;
+    width: 100%; }
+  .App .Action {
+    left: 39px;
+    top: 38px;
+    width: calc(100% - 76px);
+    height: calc(100% - 74px); }
+  .App .Foot #hoverBox-Foot,
+  .App .Left #hoverBox-Left,
+  .App .Right #hoverBox-Right {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transition: 0.7s all;
+    border: 1px solid red; }
+  .App .Left #hoverBox-Left,
+  .App .Right #hoverBox-Right {
+    width: 36px; }
+  .App .Left #hoverBox-Left {
+    right: 0px; }
+  .App .Foot #hoverBox-Foot {
+    height: 36px; }
+  .App .Foot #hoverBox-Foot:hover,
+  .App .Left #hoverBox-Left:hover,
+  .App .Right #hoverBox-Right:hover {
+    -webkit-box-shadow: 0px 0px 6px 6px rgba(0, 255, 26, 0.88);
+    box-shadow: 0px 0px 6px 6px rgba(0, 255, 26, 0.88);
+    transition: 0.7s all; }
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: sans-serif;
+  background: black !important; }
