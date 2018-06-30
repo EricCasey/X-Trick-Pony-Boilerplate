@@ -16,8 +16,29 @@ class Action extends Component {
         height: lay.foot ? 'calc(100% - 338px)' : 'calc(100% - 74px)',
         top: lay.head ? '300px' : '38px'
       }}>
-        <h1>TrickPony.Tools</h1>
-        <h1>Homepage & Boilerplate</h1>
+      <div id="hero">
+      <img src={require('../img/Sleipnir.png')} alt="horse" id="hoverBox-Head" onClick={this.props.layoutToggle} />
+        <h1>
+          Trick Pony Tools
+        </h1>
+        <h2>
+          Homepage & Open Express-React-Redux Web App Boilerplate
+        </h2>
+
+        <h4>
+          A Node, Express, React, Redux, D3, Plotly, R, Boilerplate Project
+        </h4>
+      </div>
+
+        <div className="infoDiv"> 
+          <p>
+
+          </p>
+          <img src="" alt=""/>
+        </div>
+        <div className="contentBox">
+          content content content
+        </div>
       </div>
     );
   }

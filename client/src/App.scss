@@ -2,6 +2,7 @@
   height: 100%;
   width: 100%;
   background: black;
+  overflow: hidden;
   .Head, .Left, .Right, .Foot, .Action {
     border: 2px solid lightgreen;
     border-radius: 4px;
@@ -12,7 +13,7 @@
     text-align: center;
     display: flex;
     flex-wrap: wrap;
-    h1 {
+    h1, h2 {
       margin: auto;
       width: 100%;
     }
@@ -47,25 +48,119 @@
     top: 38px;
     height: calc(100% - 74px);
     width: 36px;
-    h2 {
-      transform: rotate(90deg);
+    overflow: hidden;
+    #leftCont {
+      //border: 2px solid yellow;
+      width: 100%;
+      height: 100%;
+      h2 {
+        width: 300px;
+        height: 50px;
+        transition: 0.7s all;
+        padding-top: 1px;
+        pointer-events:none;
+        color: white;
+        border-bottom: 1px solid white;
+        mix-blend-mode: difference;
+      }
+      #leftList {
+        //border: 1px solid blue;
+        height: calc(100% - 55px);
+        width: 98%;
+        margin: auto;
+        transition: 0.7s all;
+        display: flex;
+        flex-wrap: wrap;
+        overflow: scroll;
+        .leftO {
+          border: 2px solid lightgreen;
+          height: 100px;
+          width: 100%;
+          border-radius: 4px;
+          margin: 5px auto;
+        }
+      }
     }
   }
   .Right {
     right: -2px;
     height: calc(100% - 36px);
     width: 36px;
+    overflow: hidden;
+    h2 {
+      width: 300px;
+      height: 50px;
+      transition: 0.7s all;
+      padding-top: 1px;
+      pointer-events:none;
+      color: white;
+      border-bottom: 1px solid white;
+      mix-blend-mode: difference;
+    }
   }
   .Foot {
     bottom: -4px;
     height: 36px;
     width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+    h2 {
+      border-bottom: 1px solid white;
+      width: 90%;
+      height: 34px;
+      margin: 0 auto;
+      pointer-events:none;
+      mix-blend-mode: difference;
+      color: white;
+    }
   }
   .Action {
     left: 39px;
     top: 38px;
     width: calc(100% - 76px);
     height: calc(100% - 74px); 
+    overflow: scroll;
+    #hero {
+      //border: 1px solid red;
+      width: 100%;
+      height: 50%;
+      align-content: center;
+      margin: 2.5% auto;
+      display: flex;
+      flex-wrap: wrap;
+      color: white;
+      h1, h2, h3, h4, h5 {
+        width: 100%;
+        height: 20%;
+        margin: auto;
+      }
+      img {
+        filter: invert(1);
+        height: 130px;
+        width: 170px;
+        margin: auto;
+      }
+    }
+
+    .infoDiv {
+      width: 90%;
+      height: 30%;
+      border: 2px solid lightgreen;
+      border-radius: 4px;
+      margin: 0 auto 2.5% auto;
+      display: flex;
+      p {
+        margin: auto;
+      }
+    }
+    .contentBox {
+      width: 90%;
+      height: 90%;
+      margin: auto;
+      border: 2px solid red;
+      border-radius: 4px;
+    }
   }
 
   .Foot #hoverBox-Foot,
@@ -75,7 +170,8 @@
     height: 100%;
     width: 100%;
     transition: 0.7s all;
-    border: 1px solid red;
+    padding: 2px;
+    //border: 1px dashed violet;
   }
   .Left #hoverBox-Left,
   .Right #hoverBox-Right {
@@ -87,11 +183,19 @@
   .Foot #hoverBox-Foot {
     height: 36px;
   }
-  .Foot #hoverBox-Foot:hover,
-  .Left #hoverBox-Left:hover,
+  .Left #hoverBox-Left:hover {
+    -webkit-box-shadow: inset -10px 0px 20px -5px rgba(0,255,26,0.88); 
+    box-shadow: inset -10px 0px 20px -5px rgba(0,255,26,0.88);
+    transition: 0.7s all;
+  }
+  .Foot #hoverBox-Foot:hover {
+    -webkit-box-shadow: inset 20px -5px -10px 0px rgba(0,255,26,0.88); 
+    box-shadow: inset 0px 10px 20px -5px rgba(0,255,26,0.88);
+    transition: 0.7s all;
+  }
   .Right #hoverBox-Right:hover {
-    -webkit-box-shadow: 0px 0px 6px 6px rgba(0,255,26,0.88); 
-    box-shadow: 0px 0px 6px 6px rgba(0,255,26,0.88);
+    -webkit-box-shadow: inset 10px 0px 20px -5px rgba(0,255,26,0.88); 
+    box-shadow: inset 10px 0px 20px -5px rgba(0,255,26,0.88);
     transition: 0.7s all;
   }
 }

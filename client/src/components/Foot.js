@@ -15,7 +15,7 @@ class Foot extends Component {
         left: lay.left ? '300px' : '38px',
         width: lay.left ? 'calc(100% - 300px)' : 'calc(100% - 38px)'
       }}>
-        <div id="hoverBox-Foot" onClick={this.props.layoutToggle}>HOVER</div>
+        <div id="hoverBox-Foot" onClick={this.props.layoutToggle}>^</div>
         <h2>FOOT</h2>
       </div>
     );

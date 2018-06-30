@@ -1,7 +1,8 @@
 .App {
   height: 100%;
   width: 100%;
-  background: black; }
+  background: black;
+  overflow: hidden; }
   .App .Head, .App .Left, .App .Right, .App .Foot, .App .Action {
     border: 2px solid lightgreen;
     border-radius: 4px;
@@ -12,7 +13,7 @@
     text-align: center;
     display: flex;
     flex-wrap: wrap; }
-    .App .Head h1, .App .Left h1, .App .Right h1, .App .Foot h1, .App .Action h1 {
+    .App .Head h1, .App .Head h2, .App .Left h1, .App .Left h2, .App .Right h1, .App .Right h2, .App .Foot h1, .App .Foot h2, .App .Action h1, .App .Action h2 {
       margin: auto;
       width: 100%; }
   .App .Head:hover,
@@ -40,22 +41,101 @@
     left: -2px;
     top: 38px;
     height: calc(100% - 74px);
-    width: 36px; }
-    .App .Left h2 {
-      transform: rotate(90deg); }
+    width: 36px;
+    overflow: hidden; }
+    .App .Left #leftCont {
+      width: 100%;
+      height: 100%; }
+      .App .Left #leftCont h2 {
+        width: 300px;
+        height: 50px;
+        transition: 0.7s all;
+        padding-top: 1px;
+        pointer-events: none;
+        color: white;
+        border-bottom: 1px solid white;
+        mix-blend-mode: difference; }
+      .App .Left #leftCont #leftList {
+        height: calc(100% - 55px);
+        width: 98%;
+        margin: auto;
+        transition: 0.7s all;
+        display: flex;
+        flex-wrap: wrap;
+        overflow: scroll; }
+        .App .Left #leftCont #leftList .leftO {
+          border: 2px solid lightgreen;
+          height: 100px;
+          width: 100%;
+          border-radius: 4px;
+          margin: 5px auto; }
   .App .Right {
     right: -2px;
     height: calc(100% - 36px);
-    width: 36px; }
+    width: 36px;
+    overflow: hidden; }
+    .App .Right h2 {
+      width: 300px;
+      height: 50px;
+      transition: 0.7s all;
+      padding-top: 1px;
+      pointer-events: none;
+      color: white;
+      border-bottom: 1px solid white;
+      mix-blend-mode: difference; }
   .App .Foot {
     bottom: -4px;
     height: 36px;
-    width: 100%; }
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left; }
+    .App .Foot h2 {
+      border-bottom: 1px solid white;
+      width: 90%;
+      height: 34px;
+      margin: 0 auto;
+      pointer-events: none;
+      mix-blend-mode: difference;
+      color: white; }
   .App .Action {
     left: 39px;
     top: 38px;
     width: calc(100% - 76px);
-    height: calc(100% - 74px); }
+    height: calc(100% - 74px);
+    overflow: scroll; }
+    .App .Action #hero {
+      width: 100%;
+      height: 50%;
+      align-content: center;
+      margin: 2.5% auto;
+      display: flex;
+      flex-wrap: wrap;
+      color: white; }
+      .App .Action #hero h1, .App .Action #hero h2, .App .Action #hero h3, .App .Action #hero h4, .App .Action #hero h5 {
+        width: 100%;
+        height: 20%;
+        margin: auto; }
+      .App .Action #hero img {
+        filter: invert(1);
+        height: 130px;
+        width: 170px;
+        margin: auto; }
+    .App .Action .infoDiv {
+      width: 90%;
+      height: 30%;
+      border: 2px solid lightgreen;
+      border-radius: 4px;
+      margin: 0 auto 2.5% auto;
+      display: flex; }
+      .App .Action .infoDiv p {
+        margin: auto; }
+    .App .Action .contentBox {
+      width: 90%;
+      height: 90%;
+      margin: auto;
+      border: 2px solid red;
+      border-radius: 4px; }
   .App .Foot #hoverBox-Foot,
   .App .Left #hoverBox-Left,
   .App .Right #hoverBox-Right {
@@ -63,7 +143,7 @@
     height: 100%;
     width: 100%;
     transition: 0.7s all;
-    border: 1px solid red; }
+    padding: 2px; }
   .App .Left #hoverBox-Left,
   .App .Right #hoverBox-Right {
     width: 36px; }
@@ -71,11 +151,17 @@
     right: 0px; }
   .App .Foot #hoverBox-Foot {
     height: 36px; }
-  .App .Foot #hoverBox-Foot:hover,
-  .App .Left #hoverBox-Left:hover,
+  .App .Left #hoverBox-Left:hover {
+    -webkit-box-shadow: inset -10px 0px 20px -5px rgba(0, 255, 26, 0.88);
+    box-shadow: inset -10px 0px 20px -5px rgba(0, 255, 26, 0.88);
+    transition: 0.7s all; }
+  .App .Foot #hoverBox-Foot:hover {
+    -webkit-box-shadow: inset 20px -5px -10px 0px rgba(0, 255, 26, 0.88);
+    box-shadow: inset 0px 10px 20px -5px rgba(0, 255, 26, 0.88);
+    transition: 0.7s all; }
   .App .Right #hoverBox-Right:hover {
-    -webkit-box-shadow: 0px 0px 6px 6px rgba(0, 255, 26, 0.88);
-    box-shadow: 0px 0px 6px 6px rgba(0, 255, 26, 0.88);
+    -webkit-box-shadow: inset 10px 0px 20px -5px rgba(0, 255, 26, 0.88);
+    box-shadow: inset 10px 0px 20px -5px rgba(0, 255, 26, 0.88);
     transition: 0.7s all; }
 
 body, html {

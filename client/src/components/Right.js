@@ -13,8 +13,12 @@ class Right extends Component {
         width: lay.right ? '300px' : '36px',
         height: lay.foot ? 'calc(100% - 300px)' : 'calc(100% - 36px)'
     }}>
-        <div id="hoverBox-Right" onClick={this.props.layoutToggle}>HOVER</div>
-        <h2>RIGHT</h2>
+        <div id="hoverBox-Right" onClick={this.props.layoutToggle}>{`<`}</div>
+        <h2 style={{
+              transform: lay.right ? 'rotate(0deg)' : 'rotate(270deg)',
+              margin: lay.right ? '0 0 0 0' : '110px 0 0 -10px',
+              width: lay.right ? '300px' : '1000px'
+            }}>RICKY</h2>
       </div>
     );
   }
