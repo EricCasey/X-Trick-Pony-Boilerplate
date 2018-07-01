@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 
+import Splash from './modules/Splash.js';
 
 class Action extends Component {
   constructor(props) {
@@ -16,29 +17,7 @@ class Action extends Component {
         height: lay.foot ? 'calc(100% - 338px)' : 'calc(100% - 74px)',
         top: lay.head ? '300px' : '38px'
       }}>
-      <div id="hero">
-      <img src={require('../img/Sleipnir.png')} alt="horse" id="hoverBox-Head" onClick={this.props.layoutToggle} />
-        <h1>
-          Trick Pony Tools
-        </h1>
-        <h2>
-          Homepage & Open Express-React-Redux Web App Boilerplate
-        </h2>
-
-        <h4>
-          A Node, Express, React, Redux, D3, Plotly, R, Boilerplate Project
-        </h4>
-      </div>
-
-        <div className="infoDiv"> 
-          <p>
-
-          </p>
-          <img src="" alt=""/>
-        </div>
-        <div className="contentBox">
-          content content content
-        </div>
+        <Splash layout={this.props.layout}/>
       </div>
     );
   }
