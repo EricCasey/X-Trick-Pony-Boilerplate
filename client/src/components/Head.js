@@ -38,7 +38,7 @@ class Head extends Component {
           </div>
           <div className="trick">
             <h6>4.trickpony.tools</h6>
-            <p>?</p>
+            <p>Fortnite Tracker</p>
           </div>
         </div>
       </div>
