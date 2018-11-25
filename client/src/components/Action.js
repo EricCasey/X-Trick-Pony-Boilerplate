@@ -2,6 +2,10 @@ import React, { Component } from "react";
 
 import Splash from './modules/Splash.js';
 
+// Redux Imports
+import { connect } from 'react-redux';
+// import { bindActionCreators } from 'redux';
+
 class Action extends Component {
   constructor(props) {
     super(props);
@@ -23,4 +27,26 @@ class Action extends Component {
   }
 }
 
-export default Action;
+// this is the 'data' that gets bound to props
+function mapStateToProps(state) {
+  // whatever gets returned will show up as props inside of dispatch fun
+  return {
+    theme: state.theme,
+    layout: state.layout
+  };
+}
+
+// these are the 'actions' that get bound to props
+// function mapDispatchToProps(dispatch) {
+//   // whenever <function below> is called result should be passed
+//   // to all of our reducers
+//   return bindActionCreators({
+//     LayoutChange: LayoutChange
+//   }, dispatch);
+// }
+
+// to promote monoSwitch from component to container it needs
+// to know about these things
+
+export default connect(mapStateToProps)(Action);
+// export default Action;

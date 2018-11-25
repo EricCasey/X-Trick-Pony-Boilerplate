@@ -1,6 +1,14 @@
 $border-color: lightgreen;
-$alt-border: #212121;
+$alt-border-color: #212121;
+
 $background-color: black;
+$alt-background-color: #212121;
+
+$text-color: white;
+
+body, html {
+  background: $alt-background-color !important;
+}
 
 .App {
   height: 100%;
@@ -27,7 +35,7 @@ $background-color: black;
   .Right:hover, 
   .Foot:hover, 
   .Action:hover {
-    color: white;
+    color: $text-color;
     transition: 0.7s all;
   }
   .Head {
@@ -44,9 +52,9 @@ $background-color: black;
       margin: 0;
       height: 36px;
       align-items: center;
-      color: white;
+      color: $text-color;
       font-size: 28px;
-      border-bottom: 1px solid $alt-border;
+      border-bottom: 1px solid $alt-border-color;
       width: calc(100% - 10px);
       transition: 0.7s all;
     }
@@ -59,7 +67,7 @@ $background-color: black;
       margin: 0px auto 0 auto;
       transition: 0.7s all;
       .trick {
-        border: 2px solid lightgreen;
+        border: 2px solid $border-color;
         border-radius: 4px;
         min-width: 350px;
         height: 90%;
@@ -83,8 +91,8 @@ $background-color: black;
         transition: 0.7s all;
         padding-top: 1px;
         pointer-events:none;
-        color: white;
-        border-bottom: 1px solid $alt-border;
+        color: $text-color;
+        border-bottom: 1px solid $alt-border-color;
         mix-blend-mode: difference;
       }
       #leftList {
@@ -117,8 +125,8 @@ $background-color: black;
       transition: 0.7s all;
       padding-top: 1px;
       pointer-events:none;
-      color: white;
-      border-bottom: 1px solid $alt-border;
+      color: $text-color;
+      border-bottom: 1px solid $alt-border-color;
       mix-blend-mode: difference;
     }
   }
@@ -130,13 +138,13 @@ $background-color: black;
     flex-wrap: wrap;
     text-align: left;
     h2 {
-      border-bottom: 1px solid white;
+      border-bottom: 1px solid $text-color;
       width: 90%;
       height: 34px;
       margin: 0 auto;
       pointer-events:none;
       mix-blend-mode: difference;
-      color: white;
+      color: $text-color;
     }
   }
   .Action {
@@ -154,7 +162,7 @@ $background-color: black;
         height: 50%;
         align-content: center;
         margin: 2.5% auto;
-        color: white;
+        color: $text-color;
         h1, h2, h3, h4, h5 {
           //border: 1px solid blue;
           width: 60%;
@@ -274,5 +282,5 @@ $background-color: black;
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: white; 
+  background: $text-color; 
 }

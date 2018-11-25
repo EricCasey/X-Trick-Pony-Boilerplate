@@ -1,61 +1,58 @@
 import React, { Component } from "react";
 
-// Containers
-import Left from './components/Left.js';
+// App Containers Clockwise
+import Head from './components/Head.js';
 import Right from './components/Right.js';
 import Foot from './components/Foot.js';
+import Left from './components/Left.js';
 import Action from './components/Action.js';
-import Head from './components/Head.js';
+
+// Redux Imports
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+
+// React-Redux Actions
+import { LayoutChange } from './rr_actions/rr_a_layoutChange';
+import { ThemeChange } from './rr_actions/rr_a_themeChange';
+
+// Tools
+// import Fullscreen from 'react-full-screen';
+import {SocketProvider} from 'socket.io-react';
 
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      layout: {
-        left: false,
-        right: false,
-        foot: false,
-        head: false
-      }
-    }
-    this.layoutToggle = this.layoutToggle.bind(this);
-  }
-
-  layoutToggle(e) {
-    console.log("layout toggle", e.target.id);
-    var layout = this.state.layout
-    if(e.target.id.split("-")[1] === "Left") {
-      console.log("LEFT Toggle");
-      layout = layout.left ? { left: false, right: false, foot: false, head: false } : { left: true, right: false, foot: false, head: false } 
-    } else if (e.target.id.split("-")[1] === "Right") {
-      console.log("Right toggle")
-      layout = layout.right ? { left: false, right: false, foot: false, head: false } : { left: false, right: true, foot: false, head: false } 
-    } else if (e.target.id.split("-")[1] === "Foot") {
-      console.log("foot Toggle")
-      layout = layout.foot ? { left: false, right: false, foot: false, head: false } : { left: false, right: false, foot: true, head: false } 
-    } else if (e.target.id.split("-")[1] === "Head") {
-      console.log("head Toggle")
-      layout = layout.head ? { left: false, right: false, foot: false, head: false } : { left: false, right: false, foot: false, head: true } 
-    }
-    this.setState({ layout });
+    this.state = {  }
   }
 
   render() {
     console.log(this.state.layout)
     return (
-      <div className="App">
-
-        <Head layoutToggle={this.layoutToggle} layout={this.state.layout}/>
-        <Left layoutToggle={this.layoutToggle} layout={this.state.layout} />
-        <Right layoutToggle={this.layoutToggle} layout={this.state.layout} />
-        <Foot layoutToggle={this.layoutToggle} layout={this.state.layout} />
-
-        <Action layout={this.state.layout} />
-
-        
-      </div>
+      <SocketProvider>
+        <div className="App">
+          <Head />
+          <Left />
+          <Right />
+          <Foot />
+          <Action />
+        </div>
+      </SocketProvider>
     );
   }
 }
 
-export default App;
+function mapStateToProps(state) {
+  return {
+    theme: state.theme,
+    layout: state.layout
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({
+    LayoutChange: LayoutChange,
+    ThemeChange: ThemeChange
+  }, dispatch);
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
