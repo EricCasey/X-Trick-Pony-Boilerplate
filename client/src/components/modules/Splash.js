@@ -14,24 +14,12 @@ class Splash extends Component {
     let lay = this.props.layout;
     return (
       <div className="Splash">
-      <div id="hero">
-      <div id="logoDiv">
-        <img src={require('../../img/logo/react.svg')}  id="spin-logo" alt="logo" />
-        <img src={require('../../img/Sleipnir.png')} alt="horse" id="hoverBox-Head" className="horse" onClick={this.props.layoutToggle} />
-        <img src={require('../../img/logo/redux.svg')}  id="spin-logo" alt="logo" />
-      </div>
 
-        <h1>
-          Trick Pony Tools
-        </h1>
-        <h2>
-          Homepage & Open Express-React-Redux Web App Boilerplate
-        </h2>
-
-        <h4>
-          A Node, Express, React, Redux, D3, Plotly, R, Boilerplate Project
-        </h4>
-      </div>
+        <div id="hero">
+          <h1>X_Trick_Pony Data Viz Boilerplate</h1>
+          <h2>Open Express-React-Redux Web App Boilerplate</h2>
+          <h4>A Node, Express, React, Redux, D3, Plotly, R, Boilerplate Project</h4>
+        </div>
 
         <div className="infoDiv"> 
           <p>
@@ -40,9 +28,8 @@ class Splash extends Component {
           <img src="" alt=""/>
         </div>
         <div className="contentBox">
+        <p>URL: https://github.com/EricCasey/Trick-Pony-Boilerplate</p>
           <pre>
-
-            URL: https://github.com/EricCasey/Trick-Pony-Boilerplate
             <br/>
             git clone https://github.com/EricCasey/Trick-Pony-Boilerplate my-project
             <br/>
@@ -58,8 +45,6 @@ class Splash extends Component {
             <br/>
             npm start
             <br/>
-
-
           </pre>
         </div>
       </div>

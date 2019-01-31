@@ -23,7 +23,7 @@ class Foot extends Component {
         width: lay.left ? 'calc(100% - 300px)' : 'calc(100% - 38px)'
       }}>
         <div id="hoverBox-Foot" onClick={this.props.LayoutChange}>^</div>
-        <h2>OUTPUTS FILES</h2>
+        <h2>FOOTER</h2>
       </div>
     );
   }

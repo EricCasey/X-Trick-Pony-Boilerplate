@@ -30,13 +30,13 @@ class Head extends Component {
         <h5 style={{
         width: this.props.layout.head ? 'calc(100% - 40px)' : '300px',
         fontSize: this.props.layout.head ? '28px' : '26px'
-        }}># TRICK PONY TOOLS by Casey_Works</h5>
+        }}>X_TRICK_PONY BOILDERPLATE by Casey_Works</h5>
 
         <div id="tricksCont" style={{ opacity: this.props.layout.head ? 1 : 0 }}>
 
           <div className="trick">
             <h6>0.trickpony.tools</h6>
-            <p>BOILERPLATE</p>
+            <p>THIS BOILERPLATE</p>
           </div>
 
           <div className="trick">

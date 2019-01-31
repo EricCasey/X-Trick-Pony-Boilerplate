@@ -26,7 +26,7 @@ class Right extends Component {
               transform: lay.right ? 'rotate(0deg)' : 'rotate(270deg)',
               margin: lay.right ? '0 0 0 0' : '110px 0 0 -10px',
               width: lay.right ? '300px' : '1000px'
-            }}>RESULTS</h2>
+            }}>RIGHT</h2>
       </div>
     );
   }
