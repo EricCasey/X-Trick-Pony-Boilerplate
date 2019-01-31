@@ -28,7 +28,7 @@ class Left extends Component {
           <h2 style={{
               transform: lay.left ? 'rotate(0deg)' : 'rotate(90deg)',
               margin: lay.left ? '0 0 0 0' : '60px 0 0 -143px'
-            }}>LEFT</h2>
+            }}>UI ELEMENTS</h2>
           <div id="leftList" style={{ opacity: lay.left ? 1 : 0 }}>
 
             <div className="leftO">

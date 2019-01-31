@@ -18,12 +18,12 @@ class Splash extends Component {
         <div id="hero">
           <h1>X_Trick_Pony Data Viz Boilerplate</h1>
           <h2>Open Express-React-Redux Web App Boilerplate</h2>
-          <h4>A Node, Express, React, Redux, D3, Plotly, R, Boilerplate Project</h4>
+          <h4>A Node, Express, React, Redux, D3, Plotly, Boilerplate capable of using a secondary server to communicate with the web as well as R and Python environments (planned).</h4>
         </div>
 
         <div className="infoDiv"> 
           <p>
-            React, Redux, SASS, D3, 
+            The purpose of this boilerplate is to have a pre-made UI, usefull packages and data architecture for visualization tools that use live and/or static data.
           </p>
           <img src="" alt=""/>
         </div>
